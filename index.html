@@ -1,69 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Afripriemer Group</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Afripriemer Group</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN (fast setup). Replace with local Tailwind build for production if desired. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <meta name="description" content="Afripriemer Group — General Supplies, Procurement Consultancy, Business Advisory & AI/RPA solutions in Kenya and Africa.">
+  <link rel="manifest" href="/site.webmanifest">
 </head>
+<body class="bg-[var(--light-gray)] font-sans">
 
-<body class="bg-[var(--light-gray)]">
-    <!-- Header -->
-    <header class="w-full sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-black/5">
-        <!-- ... navbar content ... -->
-    </header>
+  <!-- NAV -->
+  <header class="w-full sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-black/5">
+    <div class="mx-auto container-max px-4 md:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-3">
+          <img src="/img/logo.png" alt="Afripriemer Logo" class="h-9 w-auto object-contain" />
+          <span class="text-lg font-semibold text-[var(--deep-blue)]">Afripriemer Group</span>
+        </a>
 
+        <nav class="hidden md:flex items-center gap-7 text-sm">
+          <a href="#home" class="hover:text-[var(--emerald)]">Home</a>
+          <a href="#about" class="hover:text-[var(--emerald)]">About</a>
+          <a href="#services" class="hover:text-[var(--emerald)]">Services</a>
+          <a href="#why-us" class="hover:text-[var(--emerald)]">Why Choose Us</a>
+          <a href="#clientele" class="hover:text-[var(--emerald)]">Clientele</a>
+          <a href="#contact" class="hover:text-[var(--emerald)]">Contact</a>
+        </nav>
 
-    <!-- Hero -->
-    <section id="home" class="relative">
-        <!-- ... hero content ... -->
-    </section>
+        <div class="hidden md:block">
+          <a href="#contact" class="btn-primary inline-flex items-center gap-2 px-4 py-2 rounded-xl text-white" style="background:var(--emerald);">
+            Talk to Us
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
 
+        <button id="menuBtn" class="md:hidden p-2 rounded-lg border border-black/10" aria-label="Open Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
 
-    <!-- About -->
-    <section id="about" class="py-16 md:py-24">
-        <!-- ... about content ... -->
-    </section>
+      <div id="mobileMenu" class="md:hidden hidden py-3 border-t border-black/5">
+        <div class="grid gap-2 text-sm">
+          <a href="#home" class="py-2">Home</a>
+          <a href="#about" class="py-2">About</a>
+          <a href="#services" class="py-2">Services</a>
+          <a href="#why-us" class="py-2">Why Choose Us</a>
+          <a href="#clientele" class="py-2">Clientele</a>
+          <a href="#contact" class="py-2">Contact</a>
+        </div>
+      </div>
+    </div>
+  </header>
 
+  <!-- HERO -->
+  <section id="home" class="relative">
+    <div class="relative h-[68vh] md:h-[78vh] w-full bg-cover bg-center" style="background-image:url('assets/hero.jpg');">
+      <div class="absolute inset-0 hero-overlay"></div>
+      <div class="relative z-10 mx-auto container-max px-4 md:px-6 lg:px-8 h-full flex items-center">
+        <div class="max-w-2xl text-white">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium mb-4" style="background: rgba(230,164,0,.95);">
+            Trusted Partner for Africa’s Growth
+          </span>
+          <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-4">Pioneering Innovation for a Thriving Africa</h1>
+          <p class="text-white/90 md:text-lg mb-8">A Kenyan-based provider of General Supplies, Procurement & Business Advisory, and AI & Robotics solutions delivering reliability, value, and impact.</p>
+          <div class="flex flex-wrap items-center gap-3">
+            <a href="#services" class="btn-primary inline-flex items-center px-5 py-3 rounded-xl text-white" style="background:var(--emerald);">Explore Services</a>
+            <a href="#contact" class="btn-primary inline-flex items-center px-5 py-3 rounded-xl border" style="border-color:rgba(255,255,255,.7); color:#fff;">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Services -->
-    <section id="services" class="py-16 md:py-24 bg-white">
-        <!-- ... services content ... -->
-    </section>
+  <!-- PARTNER TEASER -->
+  <section class="py-10">
+    <div class="mx-auto container-max px-4 md:px-6 lg:px-8">
+      <div class="flex flex-wrap items-center gap-6 opacity-70 text-sm justify-center">
+        <span class="px-3 py-2 bg-white rounded-lg">Government MDAs</span>
+        <span class="px-3 py-2 bg-white rounded-lg">NGOs & Donors</span>
+        <span class="px-3 py-2 bg-white rounded-lg">Universities</span>
+        <span class="px-3 py-2 bg-white rounded-lg">Hospitals</span>
+        <span class="px-3 py-2 bg-white rounded-lg">SMEs</span>
+      </div>
+    </div>
+  </section>
 
+  <!-- ABOUT -->
+  <section id="about" class="py-16 md:py-24">
+    <div class="mx-auto container-max px-4 md:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--deep-blue)] mb-6 accent-underline">About Us</h2>
+        <p class="text-base leading-7 mb-5">Afripriemer Group is a trusted Kenyan provider offering end-to-end solutions in <strong>General Supplies</strong>, <strong>Procurement Consultancy</strong>, <strong>Business Advisory</strong>, and <strong>AI & Robotics</strong>. We simplify procurement processes and power business growth for public institutions and private organizations through professionalism, reliability, and value.</p>
+        <p class="text-base leading-7 mb-8">With a customer-first approach, we ensure every product delivered and every strategy recommended is geared toward real-world impact and lasting results.</p>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="card p-5">
+            <h3 class="font-semibold text-[var(--emerald)] mb-2">Mission</h3>
+            <p class="text-sm">To be Africa’s go-to partner for reliable supply solutions, smart procurement strategies, and sustainable business transformation.</p>
+          </div>
+          <div class="card p-5">
+            <h3 class="font-semibold text-[var(--emerald)] mb-2">Vision & Values</h3>
+            <p class="text-sm">Integrity · Reliability · Excellence · Innovation · Accountability</p>
+          </div>
+        </div>
+      </div>
 
-    <!-- Why Choose Us -->
-    <section id="why-us" class="py-16 md:py-24">
-        <!-- ... why-us content ... -->
-    </section>
+      <div class="card p-6 md:p-8 bg-white">
+        <h3 class="font-semibold text-lg mb-4">Quick Facts</h3>
+        <ul class="grid gap-3 text-sm">
+          <li class="flex items-start gap-3"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-5 h-5 text-[var(--emerald)]"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M3 7h18M3 12h18M3 17h18"/></svg></span><span>One-stop partner: supplies, consultancy, and advisory under one roof.</span></li>
+          <li class="flex items-start gap-3"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 text-[var(--emerald)]"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M12 8v8m-4-4h8"/></svg></span><span>Tailored, client-centered solutions aligned to your goals.</span></li>
+          <li class="flex items-start gap-3"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 text-[var(--emerald)]"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M3 12l2-2 4 4 10-10 2 2-12 12z"/></svg></span><span>Local expertise with regional vision and global best practices.</span></li>
+          <li class="flex items-start gap-3"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 text-[var(--emerald)]"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span><span>Timely delivery with strong after-sales support.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
+  <!-- SERVICES -->
+  <section id="services" class="py-16 md:py-24 bg-white">
+    <div class="mx-auto container-max px-4 md:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--deep-blue)] accent-underline">Our Services</h2>
+        <a href="#contact" class="hidden md:inline-flex items-center gap-2 text-sm font-medium" style="color:var(--emerald);">
+          Get a custom quote
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+        </a>
+      </div>
 
-    <!-- Clientele -->
-    <section id="clientele" class="py-16 md:py-24 bg-white">
-        <!-- ... clientele content ... -->
-    </section>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="card p-6">
+          <div class="icon-wrap mb-4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6 text-[var(--emerald)]"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M3 7h18M3 12h18M3 17h18"/></svg></div>
+          <h3 class="font-semibold text-lg mb-2">General Supplies</h3>
+          <p class="text-sm leading-6 mb-4">Office stationery & equipment, ICT devices, PPE, medical & lab, foodstuffs, electricals & electronics, cleaning & sanitary products.</p>
+          <a href="#contact" class="inline-flex items-center gap-1 text-sm font-medium" style="color:var(--emerald);">Request catalogue →</a>
+        </div>
 
+        <div class="card p-6">
+          <div class="icon-wrap mb-4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6 text-[var(--emerald)]"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M12 6v12m6-6H6"/></svg></div>
+          <h3 class="font-semibold text-lg mb-2">Procurement Consultancy</h3>
+          <p class="text-sm leading-6 mb-4">Tender & bid prep, PPADA/PPRA compliance, audits, supplier prequalification, contracts, capacity building, workflow digitization.</p>
+          <a href="#contact" class="inline-flex items-center gap-1 text-sm font-medium" style="color:var(--emerald);">Talk to an expert →</a>
+        </div>
 
-    <!-- Contact -->
-    <section id="contact" class="py-16 md:py-24">
-        <!-- ... contact content ... -->
-    </section>
+        <div class="card p-6">
+          <div class="icon-wrap mb-4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6 text-[var(--emerald)]"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M4 19h16M4 15h16M4 11h16M4 7h16"/></svg></div>
+          <h3 class="font-semibold text-lg mb-2">Business Advisory</h3>
+          <p class="text-sm leading-6 mb-4">Strategy & planning, operations optimization, financial advisory & budgeting, compliance & risk, training, MSME growth.</p>
+          <a href="#contact" class="inline-flex items-center gap-1 text-sm font-medium" style="color:var(--emerald);">Schedule a consult →</a>
+        </div>
 
+        <div class="card p-6">
+          <div class="icon-wrap mb-4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6 text-[var(--emerald)]"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M12 3v2m0 14v2m4.95-12.95l-1.41 1.41M8.46 17.54l-1.41 1.41M21 12h-2M5 12H3m14.95 4.95l-1.41-1.41M8.46 6.46 7.05 5.05"/></svg></div>
+          <h3 class="font-semibold text-lg mb-2">AI & Robotics</h3>
+          <p class="text-sm leading-6 mb-4">RPA, AI analytics, predictive maintenance, smart inventory & procurement systems, and custom AI solutions.</p>
+          <a href="#contact" class="inline-flex items-center gap-1 text-sm font-medium" style="color:var(--emerald);">Explore use-cases →</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="border-t border-black/5 bg-white">
-        <!-- ... footer content ... -->
-    </footer>
+  <!-- WHY CHOOSE US -->
+  <section id="why-us" class="py-16 md:py-24">
+    <div class="mx-auto container-max px-4 md:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--deep-blue)] mb-6 accent-underline">Why Choose Afripriemer</h2>
+        <ul class="grid gap-4 text-base">
+          <li class="flex items-start gap-4">
+            <div class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 7h18M3 12h18M3 17h18"/></svg></div>
+            <span><strong>One-Stop Partner</strong>: supplies, consultancy, and advisory integrated end-to-end.</span>
+          </li>
 
+          <li class="flex items-start gap-4">
+            <div class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v8m-4-4h8"/></svg></div>
+            <span><strong>Client-Centered</strong>: recommendations tailored to your needs and goals.</span>
+          </li>
 
-    <script src="/js/script.js"></script>
+          <li class="flex items-start gap-4">
+            <div class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 12l2-2 4 4 10-10 2 2-12 12z"/></svg></div>
+            <span><strong>Local Expertise</strong> with regional vision and global best practices.</span>
+          </li>
+
+          <li class="flex items-start gap-4">
+            <div class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></div>
+            <span><strong>Timely Delivery</strong> with reliable after-sales and service support.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card p-8">
+        <h3 class="font-semibold text-lg mb-3">Outcomes You Can Expect</h3>
+        <ul class="grid gap-3 text-sm">
+          <li>Improved procurement efficiency & compliance.</li>
+          <li>Cost savings through smarter sourcing and inventory.</li>
+          <li>Data-driven decisions via AI-powered analytics.</li>
+          <li>Scalable operations with digitized workflows.</li>
+        </ul>
+        <div class="mt-6">
+          <a href="#contact" class="btn-primary inline-flex items-center px-5 py-3 rounded-xl text-white" style="background:var(--deep-blue);">Start a Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTELE -->
+  <section id="clientele" class="py-16 md:py-24 bg-white">
+    <div class="mx-auto container-max px-4 md:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-[var(--deep-blue)] mb-8 accent-underline">Clientele</h2>
+      <p class="mb-8 max-w-3xl">We serve Government MDAs, County Governments, NGOs & donor-funded programs, schools & universities, hospitals & health facilities, and private corporations & SMEs.</p>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div class="card p-6 grid place-items-center text-sm">Government</div>
+        <div class="card p-6 grid place-items-center text-sm">NGOs</div>
+        <div class="card p-6 grid place-items-center text-sm">Universities</div>
+        <div class="card p-6 grid place-items-center text-sm">Hospitals</div>
+        <div class="card p-6 grid place-items-center text-sm">SMEs</div>
+        <div class="card p-6 grid place-items-center text-sm">Donor Programs</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-16 md:py-24">
+    <div class="mx-auto container-max px-4 md:px-6 lg:px-8 grid md:grid-cols-2 gap-10">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--deep-blue)] mb-6 accent-underline">Contact Us</h2>
+        <p class="mb-6 max-w-xl">Let’s discuss how we can support your goals. Reach out for quotes, consultations, or partnership opportunities.</p>
+
+        <div class="grid gap-4 mb-8">
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 grid place-items-center rounded-full" style="background:rgba(0,51,102,.08); color:var(--deep-blue);">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 5h18M8 5v14m8-14v14M3 19h18"/></svg>
+            </div>
+            <div>
+              <div class="font-semibold">Address</div>
+              <div>Dari Business Park, Karen – Nairobi</div>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 grid place-items-center rounded-full" style="background:rgba(0,127,92,.1); color:var(--emerald);">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 5l7 7-7 7m8 0h10"/></svg>
+            </div>
+            <div>
+              <div class="font-semibold">Phone</div>
+              <div>(+254) 743 486700</div>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 grid place-items-center rounded-full" style="background:rgba(230,164,0,.1); color:var(--warm-gold);">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 12a4 4 0 10-8 0 4 4 0 008 0z"/></svg>
+            </div>
+            <div>
+              <div class="font-semibold">Email</div>
+              <div>drbrian@afripremiergroup.org · info@afripremiergroup.org</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card p-6">
+          <div class="text-sm text-black/60">[Map Placeholder] Nairobi, Kenya</div>
+          <div class="mt-2 h-40 md:h-56 rounded-lg bg-[var(--light-gray)] grid place-items-center text-black/40">Embed Google Map here</div>
+        </div>
+      </div>
+
+      <div class="card p-6 md:p-8">
+        <form class="grid gap-4" id="contactForm" onsubmit="return false;">
+          <div>
+            <label class="block text-sm font-medium mb-1">Full Name</label>
+            <input type="text" id="name" class="w-full rounded-xl border border-black/10 px-4 py-3 focus:outline-none focus:ring-2" placeholder="Jane Doe" required />
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium mb-1">Email</label>
+              <input type="email" id="email" class="w-full rounded-xl border border-black/10 px-4 py-3 focus:outline-none focus:ring-2" placeholder="you@company.com" required />
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-1">Phone</label>
+              <input type="tel" id="phone" class="w-full rounded-xl border border-black/10 px-4 py-3 focus:outline-none focus:ring-2" placeholder="+254..." />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-1">Subject</label>
+            <input type="text" id="subject" class="w-full rounded-xl border border-black/10 px-4 py-3 focus:outline-none focus:ring-2" placeholder="How can we help?" />
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-1">Message</label>
+            <textarea id="message" rows="5" class="w-full rounded-xl border border-black/10 px-4 py-3 focus:outline-none focus:ring-2" placeholder="Tell us about your needs..." required></textarea>
+          </div>
+
+          <button id="submitBtn" type="submit" class="btn-primary inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-white" style="background:var(--emerald);">
+            Submit Inquiry
+          </button>
+
+          <p class="text-xs text-black/50">By submitting, you agree to our terms. We’ll get back to you promptly.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-black/5 bg-white">
+    <div class="mx-auto container-max px-4 md:px-6 lg:px-8 py-10 grid md:grid-cols-4 gap-8">
+      <div>
+        <div class="flex items-center gap-3 mb-3">
+          <img src="img/logo.png" alt="Afripriemer logo" class="h-8 w-auto" />
+          <span class="text-lg font-semibold text-[var(--deep-blue)]">Afripriemer Group</span>
+        </div>
+        <p class="text-sm text-black/70">Driving efficiency, growth, and impact through supplies, consultancy, advisory, and intelligent automation.</p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-3">Company</h4>
+        <ul class="text-sm grid gap-2">
+          <li><a href="#about" class="hover:text-[var(--emerald)]">About</a></li>
+          <li><a href="#services" class="hover:text-[var(--emerald)]">Services</a></li>
+          <li><a href="#why-us" class="hover:text-[var(--emerald)]">Why Choose Us</a></li>
+          <li><a href="#clientele" class="hover:text-[var(--emerald)]">Clientele</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-3">Contact</h4>
+        <ul class="text-sm grid gap-2">
+          <li>Dari Business Park, Karen – Nairobi</li>
+          <li>(+254) 743 486700</li>
+          <li>drbrian@afripremiergroup.org</li>
+          <li>info@afripremiergroup.org</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-3">Follow</h4>
+        <div class="flex gap-3 text-sm">
+          <a class="px-3 py-2 rounded-lg border border-black/10" href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a class="px-3 py-2 rounded-lg border border-black/10" href="#" aria-label="Twitter">Twitter</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-black/5 py-6 text-center text-xs text-black/60">
+      © <span id="year"></span> Afripriemer Group. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="/js/script.js"></script>
 </body>
-
 </html>
