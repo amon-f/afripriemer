@@ -1,4 +1,21 @@
+// Scroll progress indicator
+function updateScrollProgress() {
+  const scrollProgress = document.querySelector('.scroll-progress');
+  if (!scrollProgress) return;
+  
+  const windowHeight = window.innerHeight;
+  const documentHeight = document.documentElement.scrollHeight - windowHeight;
+  const scrolled = window.scrollY;
+  const progress = (scrolled / documentHeight) * 100;
+  
+  scrollProgress.style.width = `${progress}%`;
+}
+
+// Initialize all animations and event listeners
 document.addEventListener('DOMContentLoaded', function() {
+  // Initialize scroll progress
+  window.addEventListener('scroll', updateScrollProgress);
+  updateScrollProgress(); // Initial call
   // Back to top button
   const backToTopButton = document.getElementById('backToTop');
   
