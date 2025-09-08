@@ -1,0 +1,69 @@
+:root {
+    --deep-blue: #003366;
+    /* Primary 1 */
+    --emerald: #007F5C;
+    /* Primary 2 */
+    --warm-gold: #E6A400;
+    /* Accent */
+    --light-gray: #F4F4F4;
+    /* Background */
+    --charcoal: #333333;
+    /* Text */
+}
+
+
+html,
+body {
+    font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    color: var(--charcoal);
+}
+
+
+.btn-primary {
+    transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .08);
+}
+
+
+.container-max {
+    max-width: 1180px;
+}
+
+.card {
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+    background: #fff;
+}
+
+.accent-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.accent-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 64px;
+    height: 4px;
+    background: var(--warm-gold);
+    border-radius: 999px;
+}
+
+.hero-overlay {
+    background: linear-gradient(180deg, rgba(0, 51, 102, .55), rgba(0, 51, 102, .25));
+}
+
+.icon-wrap {
+    width: 56px;
+    height: 56px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    background: rgba(0, 127, 92, .1);
+}
