@@ -45,8 +45,9 @@
           </a>
         </div>
 
-        <button id="menuBtn" class="md:hidden p-2 rounded-lg border border-black/10 hover:bg-gray-100 transition-colors" aria-label="Open Menu">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <button id="menuBtn" class="md:hidden p-2 rounded-lg border border-black/10 hover:bg-gray-100 transition-colors" aria-label="Menu" aria-expanded="false" aria-controls="main-menu">
+          <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
       </div>
 
@@ -422,6 +423,17 @@
     </div>
   </footer>
 
+  <!-- Back to top button -->
+  <button id="backToTop" class="fixed bottom-6 right-6 p-3 bg-[var(--primary)] text-white rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-[var(--primary-dark)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--primary)]" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <!-- Toast container (positioned by CSS) -->
+  <div id="toast-container"></div>
+
+  <!-- Custom scripts -->
   <script src="js/script.js"></script>
 </body>
 </html>
