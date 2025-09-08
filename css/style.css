@@ -1,69 +1,48 @@
-:root {
-    --deep-blue: #003366;
-    /* Primary 1 */
-    --emerald: #007F5C;
-    /* Primary 2 */
-    --warm-gold: #E6A400;
-    /* Accent */
-    --light-gray: #F4F4F4;
-    /* Background */
-    --charcoal: #333333;
-    /* Text */
+:root{
+  --deep-blue: #003366;
+  --emerald: #007F5C;
+  --warm-gold: #E6A400;
+  --light-gray: #F4F4F4;
+  --charcoal: #333333;
 }
 
-
-html,
-body {
-    font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-    color: var(--charcoal);
+/* base */
+html,body {
+  font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial;
+  color: var(--charcoal);
 }
 
-
+/* Buttons */
 .btn-primary {
-    transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
 }
-
 .btn-primary:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .08);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.08);
 }
 
+/* Layout helpers */
+.container-max { max-width: 1180px; margin: 0 auto; }
 
-.container-max {
-    max-width: 1180px;
-}
+/* Cards */
+.card { border-radius: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,.06); background: #fff; }
 
-.card {
-    border-radius: 1rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
-    background: #fff;
-}
+/* Accent underline for headings */
+.accent-underline { position: relative; display:inline-block; }
+.accent-underline::after { content: ""; position: absolute; left: 0; bottom: -8px; width: 64px; height: 4px; background: var(--warm-gold); border-radius: 999px; }
 
-.accent-underline {
-    position: relative;
-    display: inline-block;
-}
+/* Hero overlay for better contrast */
+.hero-overlay { background: linear-gradient(180deg, rgba(0, 51, 102, .55), rgba(0, 51, 102, .25)); }
 
-.accent-underline::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 64px;
-    height: 4px;
-    background: var(--warm-gold);
-    border-radius: 999px;
-}
+/* Icon circle */
+.icon-wrap { width: 56px; height: 56px; border-radius: 999px; display:grid; place-items:center; background: rgba(0,127,92,.08); }
 
-.hero-overlay {
-    background: linear-gradient(180deg, rgba(0, 51, 102, .55), rgba(0, 51, 102, .25));
-}
+/* Utility tweaks */
+a { text-decoration: none; }
+img { display: block; max-width: 100%; height: auto; }
 
-.icon-wrap {
-    width: 56px;
-    height: 56px;
-    border-radius: 999px;
-    display: grid;
-    place-items: center;
-    background: rgba(0, 127, 92, .1);
-}
+/* Mobile nav spacing */
+#mobileMenu a { display: block; padding-left: 0.25rem; padding-right: 0.25rem; }
+
+/* Focus ring fallback */
+input:focus, textarea:focus { outline: none; box-shadow: 0 0 0 3px rgba(0,127,92,.08); border-color: var(--emerald); }
