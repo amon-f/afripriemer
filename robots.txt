@@ -1,0 +1,14 @@
+# Allow all search engine bots to crawl the website
+User-agent: *
+Allow: /
+
+# Disallow crawling of admin and other sensitive areas
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /search
+Disallow: /*?*
+Disallow: /*.php$
+
+# Sitemap location
+Sitemap: https://www.afripremiergroup.org/sitemap.xml

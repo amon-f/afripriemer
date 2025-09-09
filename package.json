@@ -1,0 +1,32 @@
+{
+  "name": "afripremier-group",
+  "version": "1.0.0",
+  "description": "Afripremier Group - Business Solutions in Kenya & Africa",
+  "main": "index.js",
+  "scripts": {
+    "optimize-images": "node optimize-images.js",
+    "build": "npm run optimize-images && npm run minify-js",
+    "minify-js": "terser js/script.js -o js/script.min.js --compress --mangle",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "business",
+    "consulting",
+    "kenya",
+    "africa",
+    "procurement",
+    "supplies",
+    "ai",
+    "rpa"
+  ],
+  "author": "Afripremier Group",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "imagemin": "^9.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^10.0.0",
+    "imagemin-svgo": "^11.0.1",
+    "sharp": "^0.34.3",
+    "terser": "^5.16.1"
+  }
+}
